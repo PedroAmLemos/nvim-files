@@ -37,6 +37,7 @@ call plug#begin('~/.config/nvim/plugged')
 	" Git
 	Plug 'kdheepak/lazygit.nvim'
 	Plug 'tpope/vim-fugitive'
+	Plug 'lewis6991/gitsigns.nvim'
 
 
 	Plug 'morhetz/gruvbox'
@@ -46,7 +47,6 @@ call plug#begin('~/.config/nvim/plugged')
 
 	Plug 'justinmk/vim-sneak'
 	Plug 'kevinhwang91/nvim-hlslens'
-	Plug 'lewis6991/gitsigns.nvim'
 	Plug 'tpope/vim-surround'
 	Plug 'preservim/nerdcommenter'
 	Plug 'jiangmiao/auto-pairs'
