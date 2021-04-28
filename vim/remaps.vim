@@ -221,3 +221,12 @@ inoremap <F9> <C-O>za
 nnoremap <F9> za
 onoremap <F9> <C-C>za
 vnoremap <F9> zf
+noremap <C-q> :qa!<CR>
+noremap <leader>sq :wq! <CR>
+
+
+
+"=================================================================="
+lua << EOF
+vim.api.nvim_set_keymap('n', '<leader>gf', ':20G<CR>', {noremap = false, silent = false})
+EOF
