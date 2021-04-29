@@ -7,7 +7,7 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'ray-x/lsp_signature.nvim'
 
 
-	Plug 'folke/which-key.nvim'
+	"Plug 'folke/which-key.nvim'
 	Plug 'windwp/nvim-spectre'
 
 
@@ -62,7 +62,7 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
 call plug#end()
-lua require'lsp_signature'.on_attach()
+"lua require'lsp_signature'.on_attach()
 "lua << EOF
   "require("which-key").setup {
     "-- your configuration comes here
