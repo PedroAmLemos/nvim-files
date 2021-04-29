@@ -63,10 +63,10 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'junegunn/fzf.vim'
 call plug#end()
 lua require'lsp_signature'.on_attach()
-lua << EOF
-  require("which-key").setup {
-    -- your configuration comes here
-    -- or leave it empty to use the default settings
-    -- refer to the configuration section below
-  }
-EOF
+"lua << EOF
+  "require("which-key").setup {
+    "-- your configuration comes here
+    "-- or leave it empty to use the default settings
+    "-- refer to the configuration section below
+  "}
+"EOF
