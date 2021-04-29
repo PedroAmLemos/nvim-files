@@ -40,6 +40,7 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'lewis6991/gitsigns.nvim'
 
 
+	Plug 'folke/tokyonight.nvim'
 	Plug 'morhetz/gruvbox'
 	Plug 'romgrk/barbar.nvim'
 	Plug 'itchyny/lightline.vim'

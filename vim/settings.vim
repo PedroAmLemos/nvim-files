@@ -11,7 +11,7 @@ set smartindent
 set incsearch
 set ignorecase
 set smartcase
-set termguicolors
+"set termguicolors
 set scrolloff=8
 set signcolumn=yes
 set noswapfile
