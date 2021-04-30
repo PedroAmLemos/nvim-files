@@ -2,6 +2,7 @@ let mapleader=" "
 set clipboard+=unnamedplus
 syntax on
 filetype plugin on
+set termguicolors
 set shortmess+=c
 set nu
 set relativenumber
@@ -11,7 +12,7 @@ set smartindent
 set incsearch
 set ignorecase
 set smartcase
-"set termguicolors
+set termguicolors
 set scrolloff=8
 set signcolumn=yes
 set noswapfile

@@ -6,19 +6,16 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'glepnir/lspsaga.nvim'
 	Plug 'ray-x/lsp_signature.nvim'
 
-
 	"Plug 'folke/which-key.nvim'
-	Plug 'windwp/nvim-spectre'
-
-	Plug 'kevinhwang91/nvim-bqf'
-
-	Plug 'preservim/tagbar'
 
 	" Autocomplete and syntax 
 	Plug 'hrsh7th/nvim-compe'
 	Plug 'SirVer/ultisnips'
 	Plug 'honza/vim-snippets'
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+	Plug 'tpope/vim-surround'
+	Plug 'preservim/nerdcommenter'
+	Plug 'jiangmiao/auto-pairs'
 
 	" Icons
 	Plug 'ryanoasis/vim-devicons'
@@ -41,29 +38,35 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'tpope/vim-fugitive'
 	Plug 'lewis6991/gitsigns.nvim'
 
-
+	" Theme configuration
 	Plug 'folke/tokyonight.nvim'
+	Plug 'tiagovla/tokyodark.nvim'
 	Plug 'morhetz/gruvbox'
 	Plug 'romgrk/barbar.nvim'
 	Plug 'itchyny/lightline.vim'
-
-
-	Plug 'justinmk/vim-sneak'
-	Plug 'kevinhwang91/nvim-hlslens'
-	Plug 'tpope/vim-surround'
-	Plug 'preservim/nerdcommenter'
-	Plug 'jiangmiao/auto-pairs'
 	Plug 'joshdick/onedark.vim'
-	Plug 'itchyny/vim-cursorword'
-	Plug 'luochen1990/rainbow'
-	Plug 'mhinz/vim-startify'
-	Plug 'simrat39/symbols-outline.nvim'
-	Plug 'BurntSushi/ripgrep'
-	Plug 'tiagovla/tokyodark.nvim'
+
+
+	" Navegation
+	" Plug 'simrat39/symbols-outline.nvim'
 	Plug 'liuchengxu/vista.vim'
 	Plug 'craigemery/vim-autotag'  " Update tags
+	Plug 'justinmk/vim-sneak'
+	Plug 'kevinhwang91/nvim-hlslens'
+	Plug 'windwp/nvim-spectre'
+	Plug 'kevinhwang91/nvim-bqf'
+	Plug 'preservim/tagbar'
+
+	" Visuals
+	Plug 'itchyny/vim-cursorword'
+	Plug 'p00f/nvim-ts-rainbow'
+	Plug 'mhinz/vim-startify'
+
+	Plug 'BurntSushi/ripgrep'
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
+	
+	" Adds indent line
 	Plug 'lukas-reineke/indent-blankline.nvim', {'branch':'lua'}
 call plug#end()
 "lua require'lsp_signature'.on_attach()
@@ -74,3 +77,12 @@ call plug#end()
     "-- refer to the configuration section below
   "}
 "EOF
+lua << EOF
+require'nvim-treesitter.configs'.setup {
+  rainbow = {
+    enable = true,
+    extended_mode = true, -- Highlight also non-parentheses delimiters, boolean or table: lang -> boolean
+    max_file_lines = 1000, -- Do not enable for files with more than 1000 lines, int
+  }
+}
+EOF

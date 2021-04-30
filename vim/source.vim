@@ -11,7 +11,7 @@ luafile ~/.config/nvim/lua/plugin/compe-config.lua
 luafile ~/.config/nvim/lua/plugin/tree-sitter-config.lua
 luafile ~/.config/nvim/lua/plugin/hlslens-config.lua
 luafile ~/.config/nvim/lua/plugin/telescope.lua
-luafile ~/.config/nvim/lua/plugin/symbols-outline-config.lua
+" luafile ~/.config/nvim/lua/plugin/symbols-outline-config.lua
 luafile ~/.config/nvim/lua/plugin/tree.lua
 luafile ~/.config/nvim/lua/plugin/gitsigns-config.lua
 luafile ~/.config/nvim/lua/plugin/vim-sneak.lua
