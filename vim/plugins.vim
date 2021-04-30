@@ -62,6 +62,7 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'craigemery/vim-autotag'  " Update tags
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
+	Plug 'lukas-reineke/indent-blankline.nvim', {'branch':'lua'}
 call plug#end()
 "lua require'lsp_signature'.on_attach()
 "lua << EOF
