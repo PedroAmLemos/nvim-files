@@ -5,6 +5,6 @@ let g:tokyonight_style = "storm"
 lua vim.g.tokyonight_italic_variables = false
 lua vim.g.tokyonight_italic_keywords  = false
 lua vim.g.tokyonight_italic_functions = false
-lua vim.g.tokyonight_sidebars = { "vista", "terminal" }
+lua vim.g.tokyonight_sidebars = { "vista", "terminal", "tagbar" }
 colorscheme tokyonight
 "hi Normal ctermbg=none guibg=none

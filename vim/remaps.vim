@@ -223,6 +223,7 @@ onoremap <F9> <C-C>za
 vnoremap <F9> zf
 noremap <C-q> :qa!<CR>
 noremap <leader>sq :wq! <CR>
+nmap <F8> :TagbarToggle<CR>
 
 
 
@@ -230,3 +231,5 @@ noremap <leader>sq :wq! <CR>
 lua << EOF
 vim.api.nvim_set_keymap('n', '<leader>gf', ':20G<CR>', {noremap = false, silent = false})
 EOF
+
+nnoremap <leader>q :copen<CR>

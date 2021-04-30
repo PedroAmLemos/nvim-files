@@ -10,7 +10,9 @@ call plug#begin('~/.config/nvim/plugged')
 	"Plug 'folke/which-key.nvim'
 	Plug 'windwp/nvim-spectre'
 
+	Plug 'kevinhwang91/nvim-bqf'
 
+	Plug 'preservim/tagbar'
 
 	" Autocomplete and syntax 
 	Plug 'hrsh7th/nvim-compe'
