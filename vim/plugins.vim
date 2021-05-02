@@ -7,7 +7,8 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'ray-x/lsp_signature.nvim'
 
 	"Plug 'folke/which-key.nvim'
-
+	Plug 'marcushwz/nvim-workbench'
+	
 	" Autocomplete and syntax 
 	Plug 'hrsh7th/nvim-compe'
 	Plug 'SirVer/ultisnips'
@@ -88,3 +89,4 @@ require'nvim-treesitter.configs'.setup {
 }
 EOF
 
+let g:workbench_storage_path = getenv("HOME") . "/Documents/Notes/"

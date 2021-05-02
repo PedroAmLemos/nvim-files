@@ -233,3 +233,24 @@ lua << EOF
 vim.api.nvim_set_keymap('n', '<leader>gf', ':20G<CR>', {noremap = false, silent = false})
 EOF
 
+
+
+
+"=================================================================="
+" Workbench
+" Below are my personal key mappings
+" <Plug>ToggleProjectWorkbench let you toggle project specific workbench
+nmap <leader>bp <Plug>ToggleProjectWorkbench
+" <Plug>ToggleBranchWorkbench let you toggle the branch specific workbench
+nmap <leader>bb <Plug>ToggleBranchWorkbench
+
+" <Plug>WorkbenchAddCheckbox allows you to easily turned a list in markdown to a checkbox
+" - testing -> - [ ] testing
+" * testing -> * [ ] testing
+" testing -> [ ] testing
+nmap ,a <Plug>WorkbenchAddCheckbox
+
+" <Plug>WorkbenchToggleCheckbox allows you to toggle the checkbox
+" - [ ] testing -> - [x] testing
+" - [x] testing -> - [ ] testing
+nmap <leader><CR> <Plug>WorkbenchToggleCheckbox
