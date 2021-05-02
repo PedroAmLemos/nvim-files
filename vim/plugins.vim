@@ -67,7 +67,10 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'BurntSushi/ripgrep'
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
-	
+
+	" Debugger
+	"Plug 'puremourning/vimspector'
+	Plug 'szw/vim-maximizer'
 	" Adds indent line
 	Plug 'lukas-reineke/indent-blankline.nvim', {'branch':'lua'}
 call plug#end()
@@ -89,4 +92,6 @@ require'nvim-treesitter.configs'.setup {
 }
 EOF
 
+packadd! vimspector
+let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
 let g:workbench_storage_path = getenv("HOME") . "/Documents/Notes/"
