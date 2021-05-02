@@ -16,6 +16,7 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'tpope/vim-surround'
 	Plug 'preservim/nerdcommenter'
 	Plug 'jiangmiao/auto-pairs'
+	Plug 'alvan/vim-closetag'
 
 	" Icons
 	Plug 'ryanoasis/vim-devicons'
@@ -86,3 +87,4 @@ require'nvim-treesitter.configs'.setup {
   }
 }
 EOF
+
