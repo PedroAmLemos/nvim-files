@@ -14,6 +14,7 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'SirVer/ultisnips'
 	Plug 'honza/vim-snippets'
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+	Plug 'windwp/nvim-ts-autotag'
 	Plug 'tpope/vim-surround'
 	Plug 'preservim/nerdcommenter'
 	Plug 'jiangmiao/auto-pairs'
@@ -52,7 +53,6 @@ call plug#begin('~/.config/nvim/plugged')
 	" Navegation
 	" Plug 'simrat39/symbols-outline.nvim'
 	Plug 'liuchengxu/vista.vim'
-	Plug 'craigemery/vim-autotag'  " Update tags
 	Plug 'justinmk/vim-sneak'
 	Plug 'kevinhwang91/nvim-hlslens'
 	Plug 'windwp/nvim-spectre'

@@ -6,7 +6,6 @@ source ~/.config/nvim/vim/rainbow-config.vim
 source ~/.config/nvim/vim/vista-config.vim
 source ~/.config/nvim/vim/lighline-config.vim
 source ~/.config/nvim/vim/telescope-config.vim
-source ~/.config/nvim/vim/autotag.vim
 source ~/.config/nvim/vim/startify.vim
 luafile ~/.config/nvim/lua/plugin/lsp-config.lua
 luafile ~/.config/nvim/lua/plugin/compe-config.lua
