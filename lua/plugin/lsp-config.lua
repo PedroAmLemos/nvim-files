@@ -27,9 +27,17 @@ require('lspkind').init({
 
 require'lspconfig'.pyright.setup{}
 require'lspconfig'.clangd.setup{}
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
+--local capabilities = vim.lsp.protocol.make_client_capabilities()
+--capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 require'lspconfig'.html.setup {
+  capabilities = capabilities,
+}
+require'lspconfig'.tsserver.setup {
+}
+--local capabilities = vim.lsp.protocol.make_client_capabilities()
+--capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+require'lspconfig'.cssls.setup {
   capabilities = capabilities,
 }
