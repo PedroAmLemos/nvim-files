@@ -2,6 +2,7 @@ let mapleader=" "
 set clipboard+=unnamedplus
 syntax on
 filetype plugin on
+set nowrap
 set cursorline
 set termguicolors
 set shortmess+=c
