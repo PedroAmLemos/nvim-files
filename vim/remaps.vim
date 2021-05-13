@@ -254,3 +254,8 @@ nmap ,a <Plug>WorkbenchAddCheckbox
 " - [ ] testing -> - [x] testing
 " - [x] testing -> - [ ] testing
 nmap <leader><CR> <Plug>WorkbenchToggleCheckbox
+
+"=================================================================="
+nnoremap <C-d> :MaximizerToggle<CR>
+inoremap <silent><expr> <C-f> compe#scroll({ 'delta': +4 }) 
+inoremap <silent><expr> <C-d> compe#scroll({ 'delta': -4 }

@@ -16,4 +16,5 @@ luafile ~/.config/nvim/lua/plugin/telescope.lua
 luafile ~/.config/nvim/lua/plugin/tree.lua
 luafile ~/.config/nvim/lua/plugin/gitsigns-config.lua
 luafile ~/.config/nvim/lua/plugin/vim-sneak.lua
+luafile ~/.config/nvim/lua/plugin/todo-comment.lua
 source ~/.config/nvim/vim/remaps.vim

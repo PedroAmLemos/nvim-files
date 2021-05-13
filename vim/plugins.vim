@@ -49,7 +49,6 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'itchyny/lightline.vim'
 	Plug 'joshdick/onedark.vim'
 
-
 	" Navegation
 	" Plug 'simrat39/symbols-outline.nvim'
 	Plug 'liuchengxu/vista.vim'
@@ -58,6 +57,7 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'windwp/nvim-spectre'
 	Plug 'kevinhwang91/nvim-bqf'
 	Plug 'preservim/tagbar'
+	Plug 'folke/todo-comments.nvim'
 
 	" Visuals
 	Plug 'itchyny/vim-cursorword'
