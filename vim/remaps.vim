@@ -74,7 +74,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-j>"
 "=================================================================="
 " Find files using Telescope command-line sugar.
 nnoremap <leader>fs :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
-nnoremap <Leader>ff :lua require('telescope.builtin').find_files()<CR>
+nnoremap <Leader>ff :lua require('telescope.builtin').find_files(require('telescope.themes').get_ivy())<CR>
 nnoremap <leader>fg :lua require('telescope.builtin').live_grep()<CR>
 nnoremap <leader>fw :lua require('telescope.builtin').grep_string { search = vim.fn.expand("<cword>") }<CR>
 nnoremap <leader>fb :lua require('telescope.builtin').buffers()<CR>
