@@ -1,5 +1,6 @@
 "Plugins 
 call plug#begin('~/.config/nvim/plugged')
+	Plug 'shaunsingh/nord.nvim'
 	" LSP
 	Plug 'onsails/lspkind-nvim'	" adds pictograms to neovim built-in lsp 
 	Plug 'neovim/nvim-lspconfig'
