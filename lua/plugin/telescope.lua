@@ -26,7 +26,7 @@ require('telescope').setup{
 		},
 	  },
 	  file_sorter =  require'telescope.sorters'.get_fzy_file,
-	  file_ignore_patterns = {'env', '__pycache__', 'plugged', 'undodir'},
+	  file_ignore_patterns = {'env', '__pycache__', 'plugged', 'undodir', 'pack'},
 	  generic_sorter =  require'telescope.sorters'.get_generic_fuzzy_sorter,
 	  shorten_path = false,
 	  winblend = 0,
