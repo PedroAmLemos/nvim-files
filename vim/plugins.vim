@@ -52,6 +52,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 	" Navegation
 	" Plug 'simrat39/symbols-outline.nvim'
+	Plug 'ahmedkhalf/lsp-rooter.nvim'
 	Plug 'liuchengxu/vista.vim'
 	Plug 'justinmk/vim-sneak'
 	Plug 'kevinhwang91/nvim-hlslens'
@@ -59,11 +60,13 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'kevinhwang91/nvim-bqf'
 	Plug 'preservim/tagbar'
 	Plug 'folke/todo-comments.nvim'
+	Plug 'ahmedkhalf/lsp-rooter.nvim'
 
 	" Visuals
 	Plug 'itchyny/vim-cursorword'
 	Plug 'p00f/nvim-ts-rainbow'
-	Plug 'mhinz/vim-startify'
+	"Plug 'mhinz/vim-startify'
+	Plug 'glepnir/dashboard-nvim'
 
 	Plug 'BurntSushi/ripgrep'
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -73,7 +76,7 @@ call plug#begin('~/.config/nvim/plugged')
 	"Plug 'puremourning/vimspector'
 	Plug 'szw/vim-maximizer'
 	" Adds indent line
-	Plug 'lukas-reineke/indent-blankline.nvim', {'branch':'lua'}
+	"Plug 'lukas-reineke/indent-blankline.nvim', {'branch':'lua'}
 call plug#end()
 "lua require'lsp_signature'.on_attach()
 "lua << EOF
