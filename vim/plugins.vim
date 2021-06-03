@@ -33,6 +33,7 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'nvim-telescope/telescope-project.nvim'
 	Plug 'fhill2/telescope-ultisnips.nvim'
 	Plug 'pwntester/octo.nvim'
+	Plug 'sudormrfbin/cheatsheet.nvim'
 
 	" Explorer
 	Plug 'kyazdani42/nvim-tree.lua'
@@ -51,7 +52,6 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'joshdick/onedark.vim'
 
 	" Navegation
-	" Plug 'simrat39/symbols-outline.nvim'
 	Plug 'ahmedkhalf/lsp-rooter.nvim'
 	Plug 'liuchengxu/vista.vim'
 	Plug 'justinmk/vim-sneak'
@@ -65,7 +65,6 @@ call plug#begin('~/.config/nvim/plugged')
 	" Visuals
 	Plug 'itchyny/vim-cursorword'
 	Plug 'p00f/nvim-ts-rainbow'
-	"Plug 'mhinz/vim-startify'
 	Plug 'glepnir/dashboard-nvim'
 
 	Plug 'BurntSushi/ripgrep'
@@ -73,12 +72,10 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'junegunn/fzf.vim'
 
 	" Debugger
-	"Plug 'puremourning/vimspector'
 	Plug 'szw/vim-maximizer'
-	" Adds indent line
-	"Plug 'lukas-reineke/indent-blankline.nvim', {'branch':'lua'}
 call plug#end()
-"lua require'lsp_signature'.on_attach()
+lua require'lsp_signature'.on_attach()
+
 "lua << EOF
   "require("which-key").setup {
     "-- your configuration comes here
@@ -86,7 +83,6 @@ call plug#end()
     "-- refer to the configuration section below
   "}
 "EOF
-lua << EOF
 require'nvim-treesitter.configs'.setup {
   rainbow = {
     enable = true,
