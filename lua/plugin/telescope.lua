@@ -1,5 +1,5 @@
 require('telescope').setup{
-	defaults = {
+	config = {
 	  vimgrep_arguments = {
 		'rg',
 		'--color=never',
@@ -11,13 +11,14 @@ require('telescope').setup{
 	  },
 	  prompt_position = "top",
 	  prompt_prefix = "> ",
+	  file_ignore_patterns = {'env', '__pycache__', 'plugged', 'undodir', 'pack'},
 	  selection_caret = "> ",
 	  entry_prefix = "  ",
 	  initial_mode = "insert",
 	  selection_strategy = "row",
 	  sorting_strategy = "ascending",
 	  layout_strategy = "horizontal",
-	  layout_defaults = {
+	  layout_config = {
 		horizontal = {
 		  mirror = false,
 		},
@@ -26,7 +27,6 @@ require('telescope').setup{
 		},
 	  },
 	  file_sorter =  require'telescope.sorters'.get_fzy_file,
-	  file_ignore_patterns = {'env', '__pycache__', 'plugged', 'undodir', 'pack'},
 	  generic_sorter =  require'telescope.sorters'.get_generic_fuzzy_sorter,
 	  shorten_path = false,
 	  winblend = 0,
@@ -68,16 +68,16 @@ local M = {}
 
 local delta = previewers.new_termopen_previewer {
   get_command = function(entry)
-    -- this is for status
-    -- You can get the AM things in entry.status. So we are displaying file if entry.status == '??' or 'A '
-    -- just do an if and return a different command
-    if entry.status == '??' or 'A ' then
-      return { 'git', '-c', 'core.pager=delta', '-c', 'delta.side-by-side=false', 'diff', entry.value }
-    end
+	-- this is for status
+	-- You can get the AM things in entry.status. So we are displaying file if entry.status == '??' or 'A '
+	-- just do an if and return a different command
+	if entry.status == '??' or 'A ' then
+	  return { 'git', '-c', 'core.pager=delta', '-c', 'delta.side-by-side=false', 'diff', entry.value }
+	end
 
-    -- note we can't use pipes
-    -- this command is for git_commits and git_bcommits
-    return { 'git', '-c', 'core.pager=delta', '-c', 'delta.side-by-side=false', 'diff', entry.value .. '^!' }
+	-- note we can't use pipes
+	-- this command is for git_commits and git_bcommits
+	return { 'git', '-c', 'core.pager=delta', '-c', 'delta.side-by-side=false', 'diff', entry.value .. '^!' }
 
   end
 }
@@ -104,15 +104,11 @@ end
 
 M.search_dotfiles = function()
 	require('telescope.builtin').find_files({
-		shorten_path = true,
+		shorten_path = false,
 		prompt_prefix = '📄 ',
 		prompt_title = "< VimRC >",
+		file_ignore_patterns = {'env', '__pycache__', 'plugged', 'undodir', 'pack'},
 		cwd = '~/.config/nvim/',
-		height = 10,
-		layout_strategy = 'horizontal',
-		layout_options = {
-			preview_widht = 0.75,
-		},
 	})
 end
 M.my_git_commits = function(opts)
